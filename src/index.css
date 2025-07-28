@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Enhance image loading */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img[src=""] {
+  display: none;
+}
+
+/* Mobile menu animations */
+@media (max-width: 768px) {
+  .mobile-menu-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .mobile-menu-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .mobile-menu-exit {
+    opacity: 1;
+  }
+  
+  .mobile-menu-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 300ms, transform 300ms;
+  }
+}
+
+/* House Themes - for background changes */
+body.house-gryffindor {
+  background: linear-gradient(135deg, #fef2f2 0%, #f9fafb 100%);
+}
+
+body.house-slytherin {
+  background: linear-gradient(135deg, #f0fdf4 0%, #f9fafb 100%);
+}
+
+body.house-hufflepuff {
+  background: linear-gradient(135deg, #fffbeb 0%, #f9fafb 100%);
+}
+
+body.house-ravenclaw {
+  background: linear-gradient(135deg, #eff6ff 0%, #f9fafb 100%);
+}
+
+/* House-themed accent animations */
+.house-gryffindor .text-blue-600 {
+  color: #dc2626 !important;
+}
+
+.house-slytherin .text-blue-600 {
+  color: #059669 !important;
+}
+
+.house-hufflepuff .text-blue-600 {
+  color: #d97706 !important;
+}
+
+.house-ravenclaw .text-blue-600 {
+  color: #2563eb !important;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  .bg-gray-50 {
+    background: white !important;
+  }
+}
