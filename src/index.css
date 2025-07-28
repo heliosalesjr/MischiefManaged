@@ -99,6 +99,10 @@ img[src=""] {
 }
 
 /* House Themes - for background changes */
+
+body {
+  background-color: #FAFAFA;
+}
 body.house-gryffindor {
   background: linear-gradient(135deg, #fef2f2 0%, #f9fafb 100%);
 }

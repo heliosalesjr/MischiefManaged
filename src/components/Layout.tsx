@@ -9,7 +9,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, currentView, onNavigate }) => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen ">
       
       <Navigation currentView={currentView} onNavigate={onNavigate} />
       
